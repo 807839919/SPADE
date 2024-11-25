@@ -8,4 +8,4 @@ Current datasets are constrained by predefined object and relationship categorie
 
 ## Open-World Visual Understanding
 Our RelDiff model has the remarkable ability to transcend the limitations of traditional dataset categories to accurately predict relationships and instances in highly imaginative scenarios. The figures underscore the strength of RelDiff in handling open-world scenarios.  By leveraging the powerful combination of diffusion models and LMMs, the model achieves a nuanced understanding of both realistic and fantastical scenes.
-<img src="figure/vis.jpg" alt="Your Image" width="800" height="200">
+<img src="figure/vis.jpg" alt="Your Image" width="1000" height="200">
