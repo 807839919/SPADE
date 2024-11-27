@@ -1,4 +1,3 @@
-# Copyright (c) OpenMMLab. All rights reserved.
 import time
 from collections import defaultdict
 from inspect import signature
@@ -45,7 +44,6 @@ if version.parse(torchvision.__version__) < version.parse('0.7'):
 
 with open('data/psg/relationship_descriptions.json', 'r') as f:
     relationship_descriptions = json.load(f)
-
 
 @HEADS.register_module()
 class PSGTrHead3(AnchorFreeHead):
