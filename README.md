@@ -7,7 +7,7 @@ Current datasets are constrained by predefined object and relationship categorie
 
 
 <p align="center">
-  <img src="./figure/GIF.gif" align="center" width="450" height="200">
+  <img src="./figure/GIF.gif" align="center" width="450" height="250">
 </p>
 
 ## Open-World Visual Understanding
