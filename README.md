@@ -6,9 +6,9 @@
 Current datasets are constrained by predefined object and relationship categories, limiting the generalization ability of trained models to unseen scenarios. These models struggle to predict diverse and imaginative relationships and instances that extend beyond traditional categories. For example, while current datasets include common objects such as “Tie” or “Chair,” they lack broader concepts like mythical creatures (e.g., “Dragon,” “Mermaid”) or fantastical relationships envisioned by human imagination.
 
 
-<p align="center">
-  <img src="./figure/GIF.gif" align="center" width="450" height="250">
-</p>
+
+<img src="./figure/GIF.gif" align="center" width="450" height="250">
+
 
 ## Open-World Visual Understanding
 Our RelDiff model has the remarkable ability to transcend the limitations of traditional dataset categories to accurately predict relationships and instances in highly imaginative scenarios. The figures underscore the strength of RelDiff in handling open-world scenarios.  By leveraging the powerful combination of diffusion models and LMMs, the model achieves a nuanced understanding of both realistic and fantastical scenes.
