@@ -1,16 +1,23 @@
 ## Abstract
 
->Panoptic Scene Graph Generation (PSG) combines panoptic segmentation and scene graph generation to provide a holistic understanding of visual scenes. With the remarkable advances in large multimodal models (LMMs), recent PSG research has increasingly focused on generating open-world panoptic scene graphs in the wild. However, current open-world PSG models typically suffer from three limitations: i) limited object and predicate categories for the open-world PSG training and evaluation; ii) difficulty in predicting spatially-related predicates; and iii) insufficient exploration of relatedness contexts. To address these limitations, we first curate a new dataset OW-PSG that is specifically designed for open-set PSG evaluation. We then propose the Relation Diffusion RelDiff model for open-world Panoptic Scene Graph Generation, which combines a diffusion model and a large multimodal model (LMM) by fine-tuning a denoising network with a lightweight LoRA technique. Moreover, we develop a Relation Graph Transformer to capture comprehensive contextual information built upon a  spatial and semantic graph. Last, we evaluate our model on the benchmark PSG, VG,  and our proposed OW-PSG dataset. Across the board, RelDiff demonstrates RelDiff's superior generalization capabilities and achieves state-of-the-art performance in the open-world setting.
-
-## Challenges in Generalizing Beyond Predefined Categories
-Current datasets are constrained by predefined object and relationship categories, limiting the generalization ability of trained models to unseen scenarios. These models struggle to predict diverse and imaginative relationships and instances that extend beyond traditional categories. For example, while current datasets include common objects such as “Tie” or “Chair,” they lack broader concepts like mythical creatures (e.g., “Dragon,” “Mermaid”) or fantastical relationships envisioned by human imagination.
+>Panoptic Scene Graph Generation (PSG) integrates instance segmentation with relation understanding to capture pixel-level structural relationships in complex scenes. Although recent approaches leveraging pre-trained vision-language models (VLMs) have significantly improved performance in the open-vocabulary setting, they commonly ignore the  inherent limitations of VLMs in spatial relation reasoning, which results in suboptimal relation prediction. Motivated by the denoising diffusion implicit model's inversion process in preserving the spatial structure of input images, we propose \textbf{SPADE} (\underline{SP}atial-\underline{A}ware \underline{D}enoising-n\underline{E}twork) framework---a novel approach for open-vocabulary PSG. SPADE consists of two key steps: (1) inversion-guided calibration for the UNet adaption, and (2) spatial-aware context reasoning. In the first step, we calibrate a general pre-trained teacher diffusion model into a PSG-specific denoising network with cross-attention maps derived during inversion through a lightweight LoRA-based fine-tuning strategy. In the second step, we develop a spatial-aware relation graph transformer that captures both local and long-range contextual information, facilitating the generation of high-quality relation queries. Extensive experiments on benchmark PSG and Visual Genome datasets demonstrate that SPADE outperforms state-of-the-art methods in both closed-set and open-set scenarios, particularly excelling in spatial relationship prediction.
 
 
+## Overview
+
+SPADE is a novel two-stage framework for **Panoptic Scene Graph Generation (PSG)** that unifies instance segmentation with relation reasoning to capture rich pixel-level structural relationships in complex scenes. Unlike conventional Vision-Language Models (VLMs) that often struggle with spatial relation prediction, SPADE leverages the strengths of diffusion models. In particular, our approach calibrates a pre-trained diffusion model via its inversion process—using cross-attention maps and a lightweight LoRA-based fine-tuning strategy—to inject spatial and relational knowledge into the denoising UNet. A spatial-aware relation graph transformer then further refines the relation queries by capturing both local and long-range contextual dependencies.
 
 <img src="figure/GIF.gif" align="center" width="450" height="250">
 
+## Key Features
 
-## Open-World Visual Understanding
-Our RelDiff model has the remarkable ability to transcend the limitations of traditional dataset categories to accurately predict relationships and instances in highly imaginative scenarios. The figures underscore the strength of RelDiff in handling open-world scenarios.  By leveraging the powerful combination of diffusion models and LMMs, the model achieves a nuanced understanding of both realistic and fantastical scenes.
+- **Inversion-Guided Calibration:** Transforms a pre-trained diffusion model into a PSG-specific denoising network by exploiting the spatial information preserved during the inversion process.
+- **Spatial-Aware Relation Reasoning:** Uses a graph transformer to integrate local cues and long-range context, enabling robust spatial relation prediction.
+- **Open-Vocabulary Generalization:** Successfully recognizes unseen objects and relationships, addressing the limitations of general-purpose LLMs in spatial reasoning.
+- **Superior Performance:** SPADE achieves state-of-the-art results on both closed-set and open-set PSG benchmarks.
 
-<img src="figure/vis.jpg" alt="Your Image" width="1000" height="150">
+
+
+
+
+
