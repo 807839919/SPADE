@@ -7,7 +7,7 @@
 
 SPADE is a novel two-stage framework for **Panoptic Scene Graph Generation (PSG)** that unifies instance segmentation with relation reasoning to capture rich pixel-level structural relationships in complex scenes. Unlike conventional Vision-Language Models (VLMs) that often struggle with spatial relation prediction, SPADE leverages the strengths of diffusion models. In particular, our approach calibrates a pre-trained diffusion model via its inversion process—using cross-attention maps and a lightweight LoRA-based fine-tuning strategy—to inject spatial and relational knowledge into the denoising UNet. A spatial-aware relation graph transformer then further refines the relation queries by capturing both local and long-range contextual dependencies.
 
-<img src="Figure/model.jpg" align="center" width="800" height="350">
+<img src="Figure/model.jpg" align="center" width="830" height="350">
 
 
 ## Key Features
