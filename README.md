@@ -18,7 +18,7 @@ SPADE is a novel two-stage framework for **Panoptic Scene Graph Generation (PSG)
 - **Superior Performance:** SPADE achieves state-of-the-art results on both closed-set and open-set PSG benchmarks.
 
 
-
+<img src="Figure/vis.jpg" align="center" width="830" height="330">
 
 
 
