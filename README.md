@@ -18,7 +18,11 @@ SPADE is a novel two-stage framework for **Panoptic Scene Graph Generation (PSG)
 - **Superior Performance:** SPADE achieves state-of-the-art results on both closed-set and open-set PSG benchmarks.
 
 
+## Visualization Results
+
+Below, we provide qualitative examples illustrating SPADE's performance in capturing both segmentation and relational cues. Each image is shown with color-coded instance masks, and our model’s predicted subject–predicate–object triplets are overlaid to highlight spatial relationships (e.g., *person throw frisbee*). These results showcase SPADE’s ability to handle both seen and unseen categories while maintaining accurate spatial reasoning.
+
 <img src="Figure/vis.jpg" align="center" width="830" height="330">
 
-
+Notably, SPADE excels at detecting distant or non-adjacent objects, which are often missed by conventional VLM-based approaches. By leveraging inversion-guided calibration and a spatial-aware relation graph transformer, our method achieves precise, context-rich scene graph generation.
 
